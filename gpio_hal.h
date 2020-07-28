@@ -1,5 +1,5 @@
 /**
- * @file    gpio.h
+ * @file    gpio_hal.h
  * @author  Brooks Anderson
  * @date    07/27/2020
  * @brief   GPIO Port Abstraction Layer
