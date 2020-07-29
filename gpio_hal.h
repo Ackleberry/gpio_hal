@@ -2,7 +2,8 @@
  * @file    gpio_hal.h
  * @author  Brooks Anderson
  * @date    07/27/2020
- * @brief   GPIO Port Abstraction Layer
+ * @brief   General Purpose Input Output Abstraction Layer. All application code
+ *          and testing should use this API.
  */
 
 #ifndef _GPIO_H
