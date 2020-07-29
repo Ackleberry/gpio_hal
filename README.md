@@ -1,6 +1,6 @@
 # About:
 
-This is an abstracted general purpose input output API. This module has no implementation. It is up to the programmer to implement the API in a low-level, hardware specific, GPIO layer.
+This is an abstracted General Purpose Input/Output API. This module has no implementation. It is up to the programmer to implement the API in a low-level, hardware specific, GPIO layer.
 
 # Why:
 
