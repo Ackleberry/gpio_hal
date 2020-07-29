@@ -19,12 +19,11 @@
  * @param[in] pin      pin identifier
  *
  */
-#ifdef GPIO_LL_Set
-#   define GPIO_Set(pin)     GPIO_LL_Set(GPIO_ll_GetPinPort(pin), GPIO_ll_GetPinField(pin))
+#ifdef GPIO_ll_Set
+#   define GPIO_Set(pin)     GPIO_ll_Set(GPIO_ll_GetPinPort(pin), GPIO_ll_GetPinField(pin))
 #else
 #   define GPIO_Set(pin)    ((void)(pin))
 #endif
-
 
 /**
  * @brief   Clears a pin logic state to LOW
@@ -33,10 +32,22 @@
  * @param[in] pin      pin identifier
  *
  */
-#ifdef GPIO_LL_Clr
-#   define GPIO_Clr(pin)     GPIO_LL_Clr(GPIO_ll_GetPinPort(pin), GPIO_ll_GetPinField(pin))
+#ifdef GPIO_ll_Clr
+#   define GPIO_Clr(pin)     GPIO_ll_Clr(GPIO_ll_GetPinPort(pin), GPIO_ll_GetPinField(pin))
 #else
 #   define GPIO_Clr(pin)    ((void)(pin))
+#endif
+
+#ifdef GPIO_ll_GetPortOutput
+#   define GPIO_GetPortOutput(port)     GPIO_ll_GetPortOutput(port)
+#else
+#   define GPIO_GetPortOutput(port)    ((void)(port))
+#endif
+
+#ifdef GPIO_ll_SetPortOutput
+#   define GPIO_SetPortOutput(port, data)     GPIO_ll_SetPortOutput(port, data)
+#else
+#   define GPIO_SetPortOutput(port, data)    ((void)(port, data)
 #endif
 
 #endif /* _GPIO_H */
