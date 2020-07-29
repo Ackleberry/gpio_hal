@@ -19,8 +19,8 @@
  * @param[in] pin      pin identifier
  *
  */
-#ifdef GPIO_ll_Set
-#   define GPIO_Set(pin)     Gpio_ll_Set(GPIO_ll_GetPinPort(pin), GPIO_ll_GetPinField(pin))
+#ifdef Gpio_ll_Set
+#   define GPIO_Set(pin)     Gpio_ll_Set(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
 #else
 #   define GPIO_Set(pin)    ((void)(pin))
 #endif
@@ -32,8 +32,8 @@
  * @param[in] pin      pin identifier
  *
  */
-#ifdef GPIO_ll_Clr
-#   define GPIO_Clr(pin)     Gpio_ll_Clr(GPIO_ll_GetPinPort(pin), GPIO_ll_GetPinField(pin))
+#ifdef Gpio_ll_Set
+#   define GPIO_Clr(pin)     Gpio_ll_Clr(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
 #else
 #   define GPIO_Clr(pin)    ((void)(pin))
 #endif
