@@ -33,10 +33,10 @@
  * @param[in] pin      pin identifier
  *
  */
-#ifdef Gpio_ll_Clr
-#   define Gpio_Clr(pin)     Gpio_ll_Clr(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
+#ifdef Gpio_ll_Clear
+#   define Gpio_Clear(pin)     Gpio_ll_Clear(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
 #else
-#   define GPIO_Clr(pin)    ((void)(pin))
+#   define GPIO_Clear(pin)    ((void)(pin))
 #endif
 
 /**
