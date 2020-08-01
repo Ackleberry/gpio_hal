@@ -40,6 +40,19 @@
 #endif
 
 /**
+ * @brief   Toggles a pin logic state.
+ * @note    This abstraction layer provides a default implementation of this
+ *          macro. Implementing this macro will override the default one.
+ * @param[in] pin      pin identifier
+ *
+ */
+#ifdef Gpio_ll_Toggle
+#   define Gpio_Toggle(pin)     Gpio_ll_Toggle(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
+#else
+#   define Gpio_Toggle(pin)    ((void)(pin))
+#endif
+
+/**
  * @brief   Configures pin as an output
  * @note    This abstraction layer provides a default implementation of this
  *          macro. Implementing this macro will override the default one.
@@ -51,6 +64,5 @@
 #else
 #   define Gpio_AsOutput(pin)    ((void)(pin))
 #endif
-
 
 #endif /* _GPIO_H */
