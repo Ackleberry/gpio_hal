@@ -23,7 +23,7 @@
 #ifdef Gpio_ll_Set
 #   define Gpio_Set(pin)     Gpio_ll_Set(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
 #else
-#   define GPIO_Set(pin)    ((void)(pin))
+#   define Gpio_Set(pin)    ((void)(pin))
 #endif
 
 /**
@@ -36,7 +36,7 @@
 #ifdef Gpio_ll_Clear
 #   define Gpio_Clear(pin)     Gpio_ll_Clear(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
 #else
-#   define GPIO_Clear(pin)    ((void)(pin))
+#   define Gpio_Clear(pin)    ((void)(pin))
 #endif
 
 /**
