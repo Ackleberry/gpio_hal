@@ -64,6 +64,18 @@
 #else
 #   define Gpio_AsOutput(pin) ((void)(pin))
 #endif
+
+/**
+ * @brief   Configures pin as an input with no pull up/down resistor
+ * @note    This abstraction layer provides a default implementation of this
+ *          macro. Implementing this macro will override the default one.
+ * @param[in] pin      pin identifier
+ *
+ */
+#ifdef Gpio_ll_AsInput
+#   define Gpio_AsInput(pin) Gpio_ll_AsInput(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
+#else
+#   define Gpio_AsInput(pin) ((void)(pin))
 #endif
 
 /**
