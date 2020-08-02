@@ -65,4 +65,17 @@
 #   define Gpio_AsOutput(pin)    ((void)(pin))
 #endif
 
+/**
+ * @brief   Determines if the pin is set high. Evaluates to true or false.
+ * @note    This abstraction layer provides a default implementation of this
+ *          macro. Implementing this macro will override the default one.
+ * @param[in] pin      pin identifier
+ *
+ */
+#ifdef Gpio_ll_IsSet
+#   define Gpio_IsSet(pin)     Gpio_ll_IsSet(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
+#else
+#   define Gpio_IsSet(pin)    ((void)(pin))
+#endif
+
 #endif /* _GPIO_H */
