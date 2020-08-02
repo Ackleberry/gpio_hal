@@ -21,9 +21,9 @@
  *
  */
 #ifdef Gpio_ll_Set
-#   define Gpio_Set(pin)     Gpio_ll_Set(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
+#   define Gpio_Set(pin) Gpio_ll_Set(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
 #else
-#   define Gpio_Set(pin)    ((void)(pin))
+#   define Gpio_Set(pin) ((void)(pin))
 #endif
 
 /**
@@ -34,9 +34,9 @@
  *
  */
 #ifdef Gpio_ll_Clear
-#   define Gpio_Clear(pin)     Gpio_ll_Clear(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
+#   define Gpio_Clear(pin) Gpio_ll_Clear(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
 #else
-#   define Gpio_Clear(pin)    ((void)(pin))
+#   define Gpio_Clear(pin) ((void)(pin))
 #endif
 
 /**
@@ -47,22 +47,23 @@
  *
  */
 #ifdef Gpio_ll_Toggle
-#   define Gpio_Toggle(pin)     Gpio_ll_Toggle(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
+#   define Gpio_Toggle(pin) Gpio_ll_Toggle(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
 #else
-#   define Gpio_Toggle(pin)    ((void)(pin))
+#   define Gpio_Toggle(pin) ((void)(pin))
 #endif
 
 /**
- * @brief   Configures pin as an output
+ * @brief   Configures pin as push pull output
  * @note    This abstraction layer provides a default implementation of this
  *          macro. Implementing this macro will override the default one.
  * @param[in] pin      pin identifier
  *
  */
 #ifdef Gpio_ll_AsOutput
-#   define Gpio_AsOutput(pin)     Gpio_ll_AsOutput(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
+#   define Gpio_AsOutput(pin) Gpio_ll_AsOutput(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
 #else
-#   define Gpio_AsOutput(pin)    ((void)(pin))
+#   define Gpio_AsOutput(pin) ((void)(pin))
+#endif
 #endif
 
 /**
@@ -73,9 +74,9 @@
  *
  */
 #ifdef Gpio_ll_IsSet
-#   define Gpio_IsSet(pin)     Gpio_ll_IsSet(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
+#   define Gpio_IsSet(pin) Gpio_ll_IsSet(Gpio_ll_GetPinPort(pin), Gpio_ll_GetPinField(pin))
 #else
-#   define Gpio_IsSet(pin)    ((void)(pin))
+#   define Gpio_IsSet(pin) ((void)(pin))
 #endif
 
 #endif /* _GPIO_H */
