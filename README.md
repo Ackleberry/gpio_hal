@@ -23,7 +23,7 @@ Drivers/
     └───test/
 ```
 
-[This example](https://github.com/Ackleberry/gpio_stm32f303xe) created platform specific driver repository and added the `gpio_hal` repository as a submodule. This example also is using UNIT tests to verify the correctness of the platform specific implementation. Testing your implementation before you port should ensure a smooth transition.
+[This example](https://github.com/Ackleberry/gpio_stm32f303xe) created a platform specific driver repository and added the `gpio_hal` repository as a submodule. This example also is using UNIT tests to verify the correctness of the platform specific implementation. Testing your implementation before you port should ensure a smooth transition.
 
 ## Example `gpio_ll.h` Template
 
