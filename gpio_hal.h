@@ -9,8 +9,6 @@
 #ifndef _GPIO_H
 #define _GPIO_H
 
-#include <stdint.h>
-
 #include "gpio_ll.h"
 
 /**
