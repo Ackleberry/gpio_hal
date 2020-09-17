@@ -11,6 +11,9 @@
 
 #include "gpio_ll.h"
 
+typedef Gpio_ll_Pin_t Gpio_Pin_t;
+typedef Gpio_ll_Mode_t Gpio_Mode_t;
+
 /**
  * @brief   Sets a pin logic state to HIGH
  * @note    This abstraction layer provides a default implementation of this
@@ -88,5 +91,7 @@
 #else
 #   define Gpio_IsSet(pin) ((void)(pin))
 #endif
+
+void Gpio_Init(Gpio_Pin_t pin, Gpio_Mode_t mode);
 
 #endif /* _GPIO_H */
