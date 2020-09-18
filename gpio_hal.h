@@ -98,6 +98,18 @@ typedef enum _Gpio_Result_t
 #   define Gpio_IsSet(pin) ((void)(pin))
 #endif
 
+/**
+ * @brief   Initializes a single pin.
+ *
+ * @note If the arguments result in over indexing then a result code is
+ * generated and no registers are touched.
+ *
+ * @param[in] pin       pin identifier
+ * @param[in] mode      pin mode
+ *
+ * @return              Result code
+ *
+ */
 Gpio_Result_t Gpio_Init(Gpio_Pin_t pin, Gpio_Mode_t mode);
 
 #endif /* _GPIO_H */
