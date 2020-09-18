@@ -14,6 +14,12 @@
 typedef Gpio_ll_Pin_t Gpio_Pin_t;
 typedef Gpio_ll_Mode_t Gpio_Mode_t;
 
+typedef enum _Gpio_Result_t
+{
+   Gpio_Result_Success = 0,
+   Gpio_Result_Init_Fail = -1,
+} Gpio_Result_t;
+
 /**
  * @brief   Sets a pin logic state to HIGH
  * @note    This abstraction layer provides a default implementation of this
@@ -92,6 +98,6 @@ typedef Gpio_ll_Mode_t Gpio_Mode_t;
 #   define Gpio_IsSet(pin) ((void)(pin))
 #endif
 
-void Gpio_Init(Gpio_Pin_t pin, Gpio_Mode_t mode);
+Gpio_Result_t Gpio_Init(Gpio_Pin_t pin, Gpio_Mode_t mode);
 
 #endif /* _GPIO_H */
