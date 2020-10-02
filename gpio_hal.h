@@ -11,8 +11,9 @@
 
 #include "gpio_ll.h"
 
-typedef Gpio_ll_Pin_t Gpio_Pin_t;
-typedef Gpio_ll_Mode_t Gpio_Mode_t;
+typedef Gpio_ll_Pin_t      Gpio_Pin_t;
+typedef Gpio_ll_Mode_t     Gpio_Mode_t;
+typedef Gpio_ll_AltFunc_t  Gpio_AltFunc_t;
 
 typedef enum _Gpio_Result_t
 {
@@ -106,10 +107,12 @@ typedef enum _Gpio_Result_t
  *
  * @param[in] pin       pin identifier
  * @param[in] mode      pin mode
+ * @param[in] altfunc   pin alternate function
  *
  * @return              Result code
  *
  */
-Gpio_Result_t Gpio_Init(Gpio_Pin_t pin, Gpio_Mode_t mode);
+Gpio_Result_t Gpio_Init(Gpio_Pin_t pin, Gpio_Mode_t mode, Gpio_AltFunc_t altFunc);
+
 
 #endif /* _GPIO_H */
